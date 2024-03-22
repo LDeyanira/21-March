@@ -162,176 +162,172 @@
         <!-- Navbar & Hero End -->
 
 
-        <!-- Services Start--> 
+       
         <div class="container-fluid service py-5">
            <div class="container py-5">
-            <div class="row">
-                <div class="row"></div>
-                     
-                <div class="col-md-3 " data-wow-delay="0.3s">
-            
-            
-                    <ul class="icon-list">
-                        <li><i class="fas fa-cog" ></i><a class="lista" href="https://www.upiih.ipn.mx/">UPIIH</a></li>
-                        <li><i class="fas fa-cog" ></i><a class="lista" href="https://simmer.io/@LAFuentes/upiih-recorrido-virtual#google_vignette">UPIIH Virtual Tour</a></li>
-                        <li><i class="fas fa-cog" ></i><a class="lista" href="https://www.facebook.com/Podcast.UPIIH/videos">Podcast UPIIH</a></li>
-    
-                        </ul>
-                   </div>
-            
-            <div class="col-md-3 " data-wow-delay="0.3s">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-content-inner">
-                        <img src="img/icon-news.gif" alt="" width="200px">
-                       -<div id="newsContainer">
-                        <!-- Aquí se mostrarán las noticias -->
-                    </div>
+            <!--Contador start-->
+            <div class="card" style="border:none;">
+                <h5 class="card-header" style="text-align: center;"> <i class="bi bi-eye-fill">Views </i>
+                    <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=16213"></a><br></a>
+
+                </h5>
                 
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-        // Realizar una solicitud GET al backend para obtener las noticias
-        fetch('show_news.php')
-            .then(response => response.json())
-            .then(data => {
-                // Manipular los datos recibidos y mostrar las primeras 5 noticias en el contenedor
-                const newsContainer = document.getElementById('newsContainer');
-                const newsList = document.createElement('ul'); // Crear una lista para las noticias
-
-                // Iterar sobre las primeras 5 noticias o menos si hay menos de 5 noticias
-                for (let i = 0; i < Math.min(4, data.length); i++) {
-                    const noticia = data[i];
-
-                    const noticiaItem = document.createElement('li'); // Crear un elemento de lista para cada noticia
-                    const noticiaElement = document.createElement('div');
-                    noticiaElement.innerHTML = `
-                        <h4 class="titulo">${noticia.Titulo}</h4>
-                        <p class="date">Date post: ${noticia.Fecha}</p>
-                        <!-- end show post -->
-                    `;
-
-                    // Agregar evento de clic al título para redirigir a news3.html
-                    noticiaElement.querySelector('.titulo').addEventListener('click', () => {
-                        window.location.href = 'news3.html';
-                    });
-
-                    noticiaItem.appendChild(noticiaElement);
-                    newsList.appendChild(noticiaItem);
-                }
-
-                newsContainer.appendChild(newsList);
-            })
-            .catch(error => console.error('Error al obtener las noticias', error));
-    });
-                    
-
-                    </script>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                 <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="service-content-inner">
-                                    <img src="img/events-icon.png" alt="" class="events">
-                                   
-                                    -<div id="newsContainer2">
-                                        <!-- Aquí se mostrarán las noticias -->
-                                    </div>
-                                
-                                    <script>
-                                        document.addEventListener("DOMContentLoaded", function() {
-        // Realizar una solicitud GET al backend para obtener las noticias
-        fetch('show_events.php')
-            .then(response => response.json())
-            .then(data => {
-                // Manipular los datos recibidos y mostrar las primeras 5 noticias en el contenedor
-                const newsContainer = document.getElementById('newsContainer2');
-                const newsList = document.createElement('ul'); // Crear una lista para las noticias
-
-                // Iterar sobre las primeras 5 noticias o menos si hay menos de 5 noticias
-                for (let i = 0; i < Math.min(4, data.length); i++) {
-                    const noticia = data[i];
-
-                    const noticiaItem = document.createElement('li'); // Crear un elemento de lista para cada noticia
-                    const noticiaElement = document.createElement('div');
-                    noticiaElement.innerHTML = `
-                        <h4 class="titulo">${noticia.Titulo}</h4>
-                        <p class="date">Date post: ${noticia.Fecha}</p>
-                        <!-- end show post -->
-                    `;
-
-                    // Agregar evento de clic al título para redirigir a news3.html
-                    noticiaElement.querySelector('.titulo').addEventListener('click', () => {
-                        window.location.href = 'events.html';
-                    });
-
-                    noticiaItem.appendChild(noticiaElement);
-                    newsList.appendChild(noticiaItem);
-                }
-
-                newsContainer.appendChild(newsList);
-            })
-            .catch(error => console.error('Error al obtener los eventos', error));
-    });
-                                                 
-                                        
-                                
-                                    </script>
-                                    
-                                </div>
-                                
-                            </div>
-                            
-                        </div>
-                       
-
-                        </div>
-                            
-                       
-                    </div>
-                    
-                   
-                                   
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                            </div>
-                        </div>
-                    </div>
-                    
-                            </div>
-                        </div>
-                    </div>
-                    
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Services End -->
-
-
-      
-                </div>
-              
-                
-             
-          
               </div>
-            </div>
-          </div>
-              
 
-      
- 
+
+               <!--Contador end-->
+             <!-- news and events section Start-->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100" style="border:none;">
+                    <img src="img/events-icon.png" class="card-img-top" alt="..." height="130">
+                    <div class="card-body">
+                      <div id="newsContainer2"></div>
+                    </div>
+                    <div class="card-footer" style="background-color:#5e2129;">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100" style="border:none;">
+                    <img src="img/news icon.gif" class="card-img-top" alt="..." height="130">
+                    <div class="card-body">
+                      <div id="newsContainer"></div>
+                    </div>
+                    <div class="card-footer"style="background-color:#5e2129;" >
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100" style="border:none;">
+        
+                    <div class="card-body">
+                        <ul class="icon-list">
+                            <li><i class="fas fa-cog" ></i><a class="lista"  href="https://www.upiih.ipn.mx/">UPIIH</a></li>
+                            <li><i class="fas fa-cog" ></i><a class="lista" href="https://simmer.io/@LAFuentes/upiih-recorrido-virtual#google_vignette">UPIIH Virtual Tour</a></li>
+                            <li><i class="fas fa-cog" ></i><a class="lista" href="https://www.facebook.com/Podcast.UPIIH/videos">Podcast UPIIH</a></li>
+        
+                            </ul>
+                    </div>
+                    <div class="card-footer"style="background-color:#5e2129;" >
+                    
+                    </div>
+                  </div>
+                </div>
+                
+
+                      
+
+                      
+        <!-- Contador de descargas -->
+        
+
+                      </div>
+                    </div>
+                  </div>
+              </div> 
+             <!---Scripts start-->
+             <script>
+               document.addEventListener("DOMContentLoaded", function (){
+                fetch('contador.php')
+                .then(response => response.json())
+                .then(data => {
+                    const contadorDownloads = document.getElementById('contadorDownloads');
+                    contadorDownloads.innerText = data.totalDescargas; // Suponiendo que el JSON devuelto tiene una propiedad 'totalDescargas'
+                })
+                .catch(error => {
+                    console.error('Error al obtener el contador de descargas:', error);
+                });
+            });
+
+
+             </script>
+                      <script>
+                                    document.addEventListener("DOMContentLoaded", function() {
+                    // Realizar una solicitud GET al backend para obtener las noticias
+                    fetch('show_news.php')
+                        .then(response => response.json())
+                        .then(data => {
+                            // Manipular los datos recibidos y mostrar las primeras 5 noticias en el contenedor
+                            const newsContainer = document.getElementById('newsContainer');
+                            const newsList = document.createElement('ul'); // Crear una lista para las noticias
+
+                            // Iterar sobre las primeras 5 noticias o menos si hay menos de 5 noticias
+                            for (let i = 0; i < Math.min(4, data.length); i++) {
+                                const noticia = data[i];
+
+                                const noticiaItem = document.createElement('li'); // Crear un elemento de lista para cada noticia
+                                const noticiaElement = document.createElement('div');
+                                noticiaElement.innerHTML = `
+                                    <h4 class="titulo">${noticia.Titulo}</h4>
+                                    <p class="date">Date post: ${noticia.Fecha}</p>
+                                    <!-- end show post -->
+                                `;
+
+                                // Agregar evento de clic al título para redirigir a news3.html
+                                noticiaElement.querySelector('.titulo').addEventListener('click', () => {
+                                    window.location.href = 'news3.html';
+                                });
+
+                                noticiaItem.appendChild(noticiaElement);
+                                newsList.appendChild(noticiaItem);
+                            }
+
+                            newsContainer.appendChild(newsList);
+                        })
+                        .catch(error => console.error('Error al obtener las noticias', error));
+                    });
+                                
+
+                                </script>
+
+                            <script>
+                                                    document.addEventListener("DOMContentLoaded", function() {
+                    // Realizar una solicitud GET al backend para obtener las noticias
+                    fetch('show_events.php')
+                        .then(response => response.json())
+                        .then(data => {
+                            // Manipular los datos recibidos y mostrar las primeras 5 noticias en el contenedor
+                            const newsContainer = document.getElementById('newsContainer2');
+                            const newsList = document.createElement('ul'); // Crear una lista para las noticias
+
+                            // Iterar sobre las primeras 5 noticias o menos si hay menos de 5 noticias
+                            for (let i = 0; i < Math.min(4, data.length); i++) {
+                                const noticia = data[i];
+
+                                const noticiaItem = document.createElement('li'); // Crear un elemento de lista para cada noticia
+                                const noticiaElement = document.createElement('div');
+                                noticiaElement.innerHTML = `
+                                    <h4 class="titulo">${noticia.Titulo}</h4>
+                                    <p class="date">Date post: ${noticia.Fecha}</p>
+                                    <!-- end show post -->
+                                `;
+
+                                // Agregar evento de clic al título para redirigir a news3.html
+                                noticiaElement.querySelector('.titulo').addEventListener('click', () => {
+                                    window.location.href = 'events.html';
+                                });
+
+                                noticiaItem.appendChild(noticiaElement);
+                                newsList.appendChild(noticiaItem);
+                            }
+
+                            newsContainer.appendChild(newsList);
+                        })
+                        .catch(error => console.error('Error al obtener los eventos', error));
+                    });
+                                                            
+                                                    
+                                            
+                                                </script>
+             <!---End scripts-->
     
-
+           </div>
+        </div>
+        <!--end news and events-->
+            
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
             <div class="container py-5">
@@ -359,6 +355,7 @@
                 </div>
                 <div class="col-lg-6">
                     <p class="mb-4 text-white">Last Update 2024 year</p>
+                   
                 </div>
             </div>
         </div>
