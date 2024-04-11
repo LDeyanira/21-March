@@ -95,20 +95,18 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People</a>
                             <div class="dropdown-menu m-0">
                                 <a href="team.html" class="dropdown-item">Principal Investigators</a>
-                                <a href="graduatedStudents.html" class="dropdown-item">Graduated Students</a>
-                                <a href="underGraduatedStudents.html" class="dropdown-item">UnderGraduated Students</a>
-                                <a href="internationalbonded.html" class="dropdown-item">Co-Investigators</a>
-                           
-                                <a href="internationalbonded.html" class="dropdown-item">Exchange students</a>
-                                <a href="internationalbonded.html" class="dropdown-item">Practicant Students</a>
-                                <a href="#" class="dropdown-item">Other collaborators</a>
+                                <a href="graduatedStudent.html" class="dropdown-item">Graduate Students</a>
+                                <a href="underGraduateStudents.html" class="dropdown-item">Under Graduate Students</a>
+                                <a href="visitStudents.html" class="dropdown-item">Visit Students</a>
+                                <a href="Alumni.html" class="dropdown-item">Alumni</a>
             
                             </div>
                         </div>
                     
                     </div>
                     <form class="d-flex" role="search">
-                        <input class="form-control-me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control-me-2" type="search" placeholder="You want to look for?" aria-label="Search" id="searchInput">
+                        
                         <button class="btn-btn-outline-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="search-button" viewBox="0 0 16 16" id="searchButton">
                           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                         </svg></button>
@@ -116,7 +114,92 @@
                       </form>  
                       
                 </div>
+                
             </nav>
+            <script>
+                //Creando filtrado de busqueda
+
+                document.getElementById("searchButton").addEventListener("click",function(){
+                    var searchTerm=document.getElementById("searchInput").value.toLowerCase();
+                    //creando variable para localizacion de noticias
+                    if (searchTerm =="news"||searchTerm=="NEWS"||searchTerm=="new"||searchTerm=="NEW"||
+                        searchTerm=="noticias"||searchTerm=="NOTICIAS"||searchTerm=="noticia"||searchTerm=="Noticia"){
+                        window.location.href="news3.html";
+                    }
+                    if (searchTerm=="publications"||searchTerm=="Publications"||searchTerm=="PUBLICATIONS"||searchTerm=="article"||searchTerm=="thesis"||searchTerm=="Article"||searchTerm=="Thesis"||searchTerm=="Patents"||searchTerm=="patents"||
+                        searchTerm=="publicacion"||searchTerm=="Publicaciones"||searchTerm=="publicación"||searchTerm=="Publicación"||searchTerm=="tesis"||searchTerm=="Artículo"||searchTerm=="artículo"||searchTerm=="TESIS"||searchTerm=="ARTICULO"||searchTerm=="PATENTES"||searchTerm=="Patente"||searchTerm=="patente")
+                    {
+                        window.location.href="publications.html";
+                    }
+                    if(searchTerm =="events"||searchTerm=="EVENTS"||searchTerm=="Event"||searchTerm=="EVENT"||searchTerm=="event"){
+                        window.location.href="events.html";
+                    }
+                    if (searchTerm =="open positions"|| searchTerm=="Open Positions"||searchTerm=="OPEN POSITIONS"||searchTerm=="openpositions"||searchTerm=="OPENPOSITIONS"){
+                        window.location.href="openpositions.html";
+                    }
+                    if(searchTerm=="galeries" || searchTerm =="GALERIES"|| searchTerm=="Galeries"||searchTerm=="photos"||searchTerm=="PHOTOS" || searchTerm=="photo"||searchTerm=="PHOTO"){
+                        window.location.href="galeries.html";
+                    }
+                    if(searchTerm=="principal investigator"||searchTerm=="Principal Investigator"||searchTerm=="PRINCIPAL INVESTIGATOR"||searchTerm=="principalinvestigator"||searchTerm=="investigators")
+                    {
+                        window.location.href="team.html";
+                    }
+                   //filtrando a los investigadores 
+                if(searchTerm=="Dra.Macaría Hernández Chávez"||searchTerm=="Macaría Hernández Chávez"||searchTerm=="MacaríaHernándezChávez"||searchTerm=="MACARIAHERNANDEZCHAVEZ"||searchTerm=="MACARIA HERNADEZ CHAVEZ"||searchTerm=="macaria hernandez chavez"||searchTerm=="macariahernandezchavez"||searchTerm=="macaria"||searchTerm=="Macaria")
+                {
+                        window.location.href="macariaHernandezChavez.html";
+                    }
+                    {
+                if (searchTerm=="Dr.Diego Adrián Fábila Bustos"||searchTerm=="Diego Adrián Fábila Bustos"||searchTerm=="DiegoAdriánFábilaBustos"||searchTerm=="Diego"||searchTerm=="diegoadrianfabilabustos")
+                        window.location.href="diegoAdrianFabilaBustos.html";
+                    }
+                if(searchTerm=="Dr.Luis Felipe de Jesús Quintanar"||searchTerm=="Luis Felipe de Jesús Quintanar"||searchTerm=="LuisFelipedeJesúsQuintanar"||searchTerm=="LUIS FELIPE DE JESUS QUINTANAR"||searchTerm=="luis felipe de jesús quintanar"||searchTerm=="luisfelipedejesúsquintanar"||searchTerm=="Luis Felipe"||searchTerm=="Luis"||searchTerm=="LUIS")
+                {
+                        window.location.href="luisFelipe.html";
+                    }
+                    if(searchTerm=="Dra.Karen Roa Tort "||searchTerm=="Karen Roa Tort "||searchTerm=="KarenRoaTort"||searchTerm=="KAREN ROA TORT"||searchTerm=="KARENROATORT"||searchTerm=="luisfelipedejesúsquintanar"||searchTerm=="karen"||searchTerm=="Karen"||searchTerm=="KAREN")
+                {
+                        window.location.href="karenRoa.html";
+                    }
+                    if(searchTerm=="Dr.Ian Ilizaliturri Flores "||searchTerm=="Ian Ilizaliturri Flores"||searchTerm=="IanIlizaliturriFlores"||searchTerm=="IAN ILIZALITURRI FLORES"||searchTerm=="IANILIZALITURRIFLORES"||searchTerm=="Ian"||searchTerm=="doctor ian"||searchTerm=="Doctor ian"||searchTerm=="Ian Ilizaliturri")
+                {
+                        window.location.href="ianilizaliturriFlores.html";
+                    }
+                    if(searchTerm=="Dr.Daniel Jiménez Olarte"||searchTerm=="Daniel Jiménez Olarte"||searchTerm=="DanielJiménezOlarte"||searchTerm=="DANIELJIMENEZOLARTE"||searchTerm=="DANIEL JIMENEZ OLARTE"||searchTerm=="doctor daniel"||searchTerm=="Doctor daniel"||searchTerm=="Daniel"||searchTerm=="daniel")
+                {
+                        window.location.href="ianilizaliturriFlores.html";
+                    }
+                    if(searchTerm=="Dr.Josué Daniel Rivera Fernandez"||searchTerm=="Josué Daniel Rivera Fernandez"||searchTerm=="JosuéDanielRiveraFernandez"||searchTerm=="JOSUE DANIEL RIVERA FERNANDEZ"||searchTerm=="JOSUEDANIELRIVERAFERNANDEZ"||searchTerm=="doctor Josué "||searchTerm=="Doctor Josué "||searchTerm=="Josué Daniel"||searchTerm=="josuedaniel")
+                {
+                        window.location.href="josueDaniel.html";
+                    }
+                    if(searchTerm=="Dr.Yahir Lozano Hernández"||searchTerm=="Yahir Lozano Hernández"||searchTerm=="YahirLozanoHernández"||searchTerm=="Yahir Lozano Hernandez"||searchTerm=="yahir lozano hernandez"||searchTerm=="doctor yahir "||searchTerm=="Doctor yahir lozano "||searchTerm=="Lozano"||searchTerm=="lozanohernandez")
+                {
+                        window.location.href="yahirLozanoHernandez.html";
+                    }
+                    //filtrando el resto de las busquedas
+                    if(searchTerm=="Graduate Students"||searchTerm=="graduate students"||searchTerm=="GRADUATESTUDENTS"||searchTerm=="estudiantes graduados"||searchTerm=="Estudiantesgraduados"||searchTerm=="estudiantesgraduados"||searchTerm=="graduados"||searchTerm=="Graduados"||searchTerm=="postgrado")
+                {
+                        window.location.href="graduatedStudent.html";
+                    }
+                    if(searchTerm=="Under Graduate Students"||searchTerm=="under graduate students"||searchTerm=="UNDER GRADUATE STUDENTS"||searchTerm=="estudiantes no graduados "||searchTerm=="Estudiantes"||searchTerm=="Under Graduate Students"||searchTerm=="UNDERGRADUATESTUDENTS"||searchTerm=="undergraduatestudents"||searchTerm=="estudiantes")
+                {
+                        window.location.href="underGraduateStudents.html";
+                    }
+                    if(searchTerm=="visitStudents"||searchTerm=="Visit Students"||searchTerm=="visit students"||searchTerm=="Visit Students"||searchTerm=="Estudiantes visitantes"||searchTerm=="estudiantes visitantes"||searchTerm=="practicantes"||searchTerm=="Practicantes"||searchTerm=="PRACTICANTES")
+                {
+                        window.location.href="visitStudents.html";
+                    }
+                    if(searchTerm=="alumni"||searchTerm=="oldstudents"||searchTerm=="ALUMNI"||searchTerm=="antiguos alumnos"||searchTerm=="Alumni"||searchTerm=="estudiantes egresados"||searchTerm=="Egresados"||searchTerm=="EGRESADOS"||searchTerm=="estudiantes egresados")
+                {
+                        window.location.href="Alumni.html";
+                    }
+                    
+
+                })
+
+            
+                            </script>
 
 
             <!-- Carousel Start -->

@@ -93,29 +93,111 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People</a>
                             <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">Principal Investigators</a>
-                                <a href="graduatedStudents.html" class="dropdown-item">Graduated Students</a>
-                                <a href="underGraduatedStudents.html" class="dropdown-item">UnderGraduated Students</a>
-                                <a href="internationalbonded.html" class="dropdown-item">Co-Investigators</a>
-                               
-                                <a href="internationalbonded.html" class="dropdown-item">Exchange students</a>
-                                <a href="internationalbonded.html" class="dropdown-item">Practicant Students</a>
-                                <a href="#" class="dropdown-item">Other collaborators</a>
+                              <a href="team.html" class="dropdown-item">Principal Investigators</a>
+                              <a href="graduatedStudent.html" class="dropdown-item">Graduate Students</a>
+                              <a href="underGraduateStudents.html" class="dropdown-item">Under Graduate Students</a>
+                              <a href="visitStudents.html" class="dropdown-item">Visit Students</a>
+                              <a href="Alumni.html" class="dropdown-item">Alumni</a>
             
                             </div>
                         </div>
                     
                     </div>
                     <form class="d-flex" role="search">
-                        <input class="form-control-me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn-btn-outline-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="search-button" viewBox="0 0 16 16" id="searchButton">
-                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                        </svg></button>
-                        
-                      </form>  
+                      <input class="form-control-me-2" type="search" placeholder="You want to look for?" aria-label="Search" id="searchInput">
+                      
+                      <button class="btn-btn-outline-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="search-button" viewBox="0 0 16 16" id="searchButton">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg></button>
+                      
+                    </form> 
                       
                 </div>
             </nav>
+            <script>
+              //Creando filtrado de busqueda
+
+              document.getElementById("searchButton").addEventListener("click",function(){
+                  var searchTerm=document.getElementById("searchInput").value.toLowerCase();
+                  //creando variable para localizacion de noticias
+                  if (searchTerm =="news"||searchTerm=="NEWS"||searchTerm=="new"||searchTerm=="NEW"||
+                      searchTerm=="noticias"||searchTerm=="NOTICIAS"||searchTerm=="noticia"||searchTerm=="Noticia"){
+                      window.location.href="news3.html";
+                  }
+                  if (searchTerm=="publications"||searchTerm=="Publications"||searchTerm=="PUBLICATIONS"||searchTerm=="article"||searchTerm=="thesis"||searchTerm=="Article"||searchTerm=="Thesis"||searchTerm=="Patents"||searchTerm=="patents"||
+                      searchTerm=="publicacion"||searchTerm=="Publicaciones"||searchTerm=="publicación"||searchTerm=="Publicación"||searchTerm=="tesis"||searchTerm=="Artículo"||searchTerm=="artículo"||searchTerm=="TESIS"||searchTerm=="ARTICULO"||searchTerm=="PATENTES"||searchTerm=="Patente"||searchTerm=="patente")
+                  {
+                      window.location.href="publications.html";
+                  }
+                  if(searchTerm =="events"||searchTerm=="EVENTS"||searchTerm=="Event"||searchTerm=="EVENT"||searchTerm=="event"){
+                      window.location.href="events.html";
+                  }
+                  if (searchTerm =="open positions"|| searchTerm=="Open Positions"||searchTerm=="OPEN POSITIONS"||searchTerm=="openpositions"||searchTerm=="OPENPOSITIONS"){
+                      window.location.href="openpositions.html";
+                  }
+                  if(searchTerm=="galeries" || searchTerm =="GALERIES"|| searchTerm=="Galeries"||searchTerm=="photos"||searchTerm=="PHOTOS" || searchTerm=="photo"||searchTerm=="PHOTO"){
+                      window.location.href="galeries.html";
+                  }
+                  if(searchTerm=="principal investigator"||searchTerm=="Principal Investigator"||searchTerm=="PRINCIPAL INVESTIGATOR"||searchTerm=="principalinvestigator"||searchTerm=="investigators")
+                  {
+                      window.location.href="team.html";
+                  }
+                 //filtrando a los investigadores 
+              if(searchTerm=="Dra.Macaría Hernández Chávez"||searchTerm=="Macaría Hernández Chávez"||searchTerm=="MacaríaHernándezChávez"||searchTerm=="MACARIAHERNANDEZCHAVEZ"||searchTerm=="MACARIA HERNADEZ CHAVEZ"||searchTerm=="macaria hernandez chavez"||searchTerm=="macariahernandezchavez"||searchTerm=="macaria"||searchTerm=="Macaria")
+              {
+                      window.location.href="macariaHernandezChavez.html";
+                  }
+                  {
+              if (searchTerm=="Dr.Diego Adrián Fábila Bustos"||searchTerm=="Diego Adrián Fábila Bustos"||searchTerm=="DiegoAdriánFábilaBustos"||searchTerm=="Diego"||searchTerm=="diegoadrianfabilabustos")
+                      window.location.href="diegoAdrianFabilaBustos.html";
+                  }
+              if(searchTerm=="Dr.Luis Felipe de Jesús Quintanar"||searchTerm=="Luis Felipe de Jesús Quintanar"||searchTerm=="LuisFelipedeJesúsQuintanar"||searchTerm=="LUIS FELIPE DE JESUS QUINTANAR"||searchTerm=="luis felipe de jesús quintanar"||searchTerm=="luisfelipedejesúsquintanar"||searchTerm=="Luis Felipe"||searchTerm=="Luis"||searchTerm=="LUIS")
+              {
+                      window.location.href="luisFelipe.html";
+                  }
+                  if(searchTerm=="Dra.Karen Roa Tort "||searchTerm=="Karen Roa Tort "||searchTerm=="KarenRoaTort"||searchTerm=="KAREN ROA TORT"||searchTerm=="KARENROATORT"||searchTerm=="luisfelipedejesúsquintanar"||searchTerm=="karen"||searchTerm=="Karen"||searchTerm=="KAREN")
+              {
+                      window.location.href="karenRoa.html";
+                  }
+                  if(searchTerm=="Dr.Ian Ilizaliturri Flores "||searchTerm=="Ian Ilizaliturri Flores"||searchTerm=="IanIlizaliturriFlores"||searchTerm=="IAN ILIZALITURRI FLORES"||searchTerm=="IANILIZALITURRIFLORES"||searchTerm=="Ian"||searchTerm=="doctor ian"||searchTerm=="Doctor ian"||searchTerm=="Ian Ilizaliturri")
+              {
+                      window.location.href="ianilizaliturriFlores.html";
+                  }
+                  if(searchTerm=="Dr.Daniel Jiménez Olarte"||searchTerm=="Daniel Jiménez Olarte"||searchTerm=="DanielJiménezOlarte"||searchTerm=="DANIELJIMENEZOLARTE"||searchTerm=="DANIEL JIMENEZ OLARTE"||searchTerm=="doctor daniel"||searchTerm=="Doctor daniel"||searchTerm=="Daniel"||searchTerm=="daniel")
+              {
+                      window.location.href="ianilizaliturriFlores.html";
+                  }
+                  if(searchTerm=="Dr.Josué Daniel Rivera Fernandez"||searchTerm=="Josué Daniel Rivera Fernandez"||searchTerm=="JosuéDanielRiveraFernandez"||searchTerm=="JOSUE DANIEL RIVERA FERNANDEZ"||searchTerm=="JOSUEDANIELRIVERAFERNANDEZ"||searchTerm=="doctor Josué "||searchTerm=="Doctor Josué "||searchTerm=="Josué Daniel"||searchTerm=="josuedaniel")
+              {
+                      window.location.href="josueDaniel.html";
+                  }
+                  if(searchTerm=="Dr.Yahir Lozano Hernández"||searchTerm=="Yahir Lozano Hernández"||searchTerm=="YahirLozanoHernández"||searchTerm=="Yahir Lozano Hernandez"||searchTerm=="yahir lozano hernandez"||searchTerm=="doctor yahir "||searchTerm=="Doctor yahir lozano "||searchTerm=="Lozano"||searchTerm=="lozanohernandez")
+              {
+                      window.location.href="yahirLozanoHernandez.html";
+                  }
+                  //filtrando el resto de las busquedas
+                  if(searchTerm=="Graduate Students"||searchTerm=="graduate students"||searchTerm=="GRADUATESTUDENTS"||searchTerm=="estudiantes graduados"||searchTerm=="Estudiantesgraduados"||searchTerm=="estudiantesgraduados"||searchTerm=="graduados"||searchTerm=="Graduados"||searchTerm=="postgrado")
+              {
+                      window.location.href="graduatedStudent.html";
+                  }
+                  if(searchTerm=="Under Graduate Students"||searchTerm=="under graduate students"||searchTerm=="UNDER GRADUATE STUDENTS"||searchTerm=="estudiantes no graduados "||searchTerm=="Estudiantes"||searchTerm=="Under Graduate Students"||searchTerm=="UNDERGRADUATESTUDENTS"||searchTerm=="undergraduatestudents"||searchTerm=="estudiantes")
+              {
+                      window.location.href="underGraduateStudents.html";
+                  }
+                  if(searchTerm=="visitStudents"||searchTerm=="Visit Students"||searchTerm=="visit students"||searchTerm=="Visit Students"||searchTerm=="Estudiantes visitantes"||searchTerm=="estudiantes visitantes"||searchTerm=="practicantes"||searchTerm=="Practicantes"||searchTerm=="PRACTICANTES")
+              {
+                      window.location.href="visitStudents.html";
+                  }
+                  if(searchTerm=="alumni"||searchTerm=="oldstudents"||searchTerm=="ALUMNI"||searchTerm=="antiguos alumnos"||searchTerm=="Alumni"||searchTerm=="estudiantes egresados"||searchTerm=="Egresados"||searchTerm=="EGRESADOS"||searchTerm=="estudiantes egresados")
+              {
+                      window.location.href="Alumni.html";
+                  }
+                  
+
+              })
+
+          
+                          </script>
         </div>
         <!-- Navbar & Hero End -->
 
@@ -162,7 +244,7 @@
               Journal, Multimedia Tools and Applications, Publisher Springer US , pages 19 ,2023.</div>
               <div class="card-body">
                   Dayanira Morales Corral Karla Susana Bernal Alvarado, Macaria Hernández Chávez, Nadia Valentina Martínez Villegas,
-                  <a href="index.html">"IUPAC - Global Women's Breakfast 2023 Mexico. Breaking Barriers in Science"</a>, 
+                  <a href="https://iupac.org/gwb/2023/global-womens-breakfast-2023/">"IUPAC - Global Women's Breakfast 2023 Mexico. Breaking Barriers in Science"</a>, 
                   Journal, Bulletin of the Checmical Society of Mexico (Bol. Soc. Quim. Mex.) , volume 17, Issue2 ,2023.</div>
                   <div class="card-body">
                       Gabriel Alejandro Bañuelos-Peña, Allan Christopher Coronado-Andrade, Juan Eduardo Velázquez-Velázquez, Josué Daniel Rivera-Fernández, Diego Adrián Fabila-Bustos,
@@ -176,6 +258,26 @@
                       Gabriel Martínez-Razo, María Lilia Domínguez-López, José M de la Rosa, Diego A Fabila-Bustos, Elba Reyes-Maldonado, Eliezer Conde-Vázquez, Armando Vega-López,
                      <a href="https://link.springer.com/article/10.1007/s00210-022-02299-z">"Norcantharidin toxicity profile: an in vivo murine study"</a>, 
                      Review,Naunyn-Schmiedeberg's Archives of Pharmacology , volume 396,Pages 108,Springer Berlin Heidelberg Editor,2023.</div>
+                     <div class="card-body">
+                      Rosalba Galván-Guerra, Luis Alberto Cantera-Cantera, Yair Lozano-Hernández, Juan Eduardo Velázquez-Velázquez, Raúl Villafuerte-Segura,
+                     <a href="https://repository.uaeh.edu.mx/revistas/index.php/icbi/article/view/12000">"Editorial of the special issue: Technological solutions, academia and industry"</a>, 
+                     Pädi Boletín Científico de Ciencias Básicas e Ingenierías del ICBI, volume 11,Pages I-III,2023.</div>
+                     <div class="card-body">
+                      Julio Castillo-Aparicio, Alondra Zutelly Vega-Arroyo, Jaime González-Sierra, Yair Lozano-Hernández,
+                     <a href="https://repository.uaeh.edu.mx/revistas/index.php/icbi/article/view/11332">"Formation control with collision avoidance in first and second order agents"</a>, 
+                     Pädi Boletín Científico de Ciencias Básicas e Ingenierías del ICBI, volume 11,Pages 1-9,2023.</div>
+                     <div class="card-body">
+                      Iván Guadalupe Álvarez-Ortiz, Víctor Gabriel Sánchez-Meza, Yair Lozano-Hernández, Jaime González-Sierra, Ricardo Yahir Almazán-Arvizu,
+                     <a href="https://repository.uaeh.edu.mx/revistas/index.php/icbi/article/view/11406">"Integration of X-Plane as hardware-in-the-loop for the validation of control schemes in quadrotor-type UAVs"</a>, 
+                     Pädi Boletín Científico de Ciencias Básicas e Ingenierías del ICBI, volume 11,Pages 137-146,2023.</div>
+                     <div class="card-body">
+                      Yair Lozano-Hernández, Ismael Martínez de la Cruz, Octavio Gutiérrez-Frías, Norma Lozada-Castillo, Alberto Luviano-Juárez,
+                     <a href="https://www.mdpi.com/2504-446X/7/4/270">"Design Procedure of a Low-Cost System for Energy Replenishment in a Quadrotor UAV through a Battery Exchange Mechanism"</a>, 
+                     Review Drones,vol 7, Editor MDPI, Pages 270,2023.</div>
+                     <div class="card-body">
+                      Victor-Gabriel Sánchez-Meza, Yair Lozano-Hernández, Octavio Gutiérrez-Frías, Norma Lozada-Castillo, Alberto Luviano-Juárez,
+                     <a href="https://intapi.sciendo.com/pdf/10.34768/amcs-2023-0038">"Robust flat filtering control of a two degrees of freedom helicopter subject to tail rotor disturbances"</a>, 
+                     Review International Journal of Applied Mathematics and Computer Science,vol 33, Pages 521-535.</div>
             </div>
           </div>
         </div>
@@ -199,7 +301,7 @@
               2022.
             </div>
             <div class="card-body">
-              Dayanira Morales Corral Karla Susana Bernal Alvarado, Macaria Hernández Chávez, Daniela Yenthile Rodríguez Hernández<a href="index.html">"Application in augmented reality to improve the 3D visualization of molecules and chemical models and their effect on the use"</a>,
+              Dayanira Morales Corral Karla Susana Bernal Alvarado, Macaria Hernández Chávez, Daniela Yenthile Rodríguez Hernández<a href="https://www.researchgate.net/profile/Macaria-Hernandez-Chavez/publication/363661291_Application_in_augmented_reality_to_improve_the_3D_visualization_of_molecules_and_chemical_models_and_their_effect_on_the_academic_achievement/links/6328990c70cc936cd31db492/Application-in-augmented-reality-to-improve-the-3D-visualization-of-molecules-and-chemical-models-and-their-effect-on-the-academic-achievement.pdf">"Application in augmented reality to improve the 3D visualization of molecules and chemical models and their effect on the use"</a>,
               Journal Bulletin of the Chemical Society of Mexico , Volume 16, ISSUE 1, Pages 17-19, Publisher Chemical Society of Mexico, 2022.
             </div>
             <div class="card-body">
@@ -218,6 +320,26 @@
             <div class="card-body">
               S Ramírez-Velasco, JR González-Castillo, F Ayala-Mató, V Hernández-Calderón, D Jiménez-Olarte, O Vigil-Galán<a href="https://www.sciencedirect.com/science/article/pii/S0040609022001432">"Back contact modification in Sb2Se3 solar cells: The effect of a thin layer of MoSe2"</a>,
               Review Thin Solid Films, Volume 751, Pages 139227, Editor Elsevier, 2022.
+            </div>
+            <div class="card-body">
+              Luis Alberto Cantera-Cantera, Cristóbal Vargas-Jarillo, Sergio Isaí Palomino-Reséndiz, Yair Lozano-Hernández, Carlos Manuel Montelongo-Vázquez<a href="https://www.mdpi.com/2227-7390/10/23/4596">"A Polynomial Fitting Problem: The Orthogonal Distances Method"</a>,Review Mathematics, vol 10, 
+              Editor MDPI,
+              2022.
+            </div>
+            <div class="card-body">
+              Roberto Luis Palomino-Resendiz, Ariel Cortés-Perales, Rodrigo Gonzalez-Vega, Yair Lozano-Hernández, Sergio Isai Palomino-Resendiz<a href="https://repository.uaeh.edu.mx/revistas/index.php/icbi/article/view/8770">"Proposal for the design of a Turgo-type turbine and low-power sustainable electrical generating system."</a>,Review Pädi Boletín Científico de Ciencias Básicas e Ingenierías del ICBI, vol 10,Pages 79-85 
+              ,
+              2022.
+            </div>
+            <div class="card-body">
+              Andrés Abraham Palma-Huerta, Yair Lozano-Hernández, Hugo Luis Serrano-Molina, Juan Eduardo Velázquez-Velázquez, Carlos Manuel Montelongo-Vázquez, Carlos Manuel Montelongo-Vázquez<a href="https://scholar.google.com.mx/citations?view_op=view_citation&hl=es&user=McTgaeAAAAAJ&sortby=pubdate&citation_for_view=McTgaeAAAAAJ:8k81kl-MbHgC">"Instrumentation of a transtibial prototype to replicate the ankle gait cycle"</a>,Review Pädi Boletín Científico de Ciencias Básicas e Ingenierías del ICBI, vol 10,Pages 66-78 
+              ,
+              2022.
+            </div>
+            <div class="card-body">
+              ICBI Pädi, Rosalba Galvan-Guerra, Luis Alberto Cantera-Cantera, Yair Lozano-Hernández, Juan Eduardo Velázquez-Velázquez<a href="https://repository.uaeh.edu.mx/revistas/index.php/icbi/article/view/10122">"Editorial of the Special Issue Science and Technology: Mechatronics and Automotive Trends"</a>,Review Pädi Boletín Científico de Ciencias Básicas e Ingenierías del ICBI, vol 10,Pages I-III 
+              ,
+              2022.
             </div>
           </div>
           <div class="card">
@@ -247,6 +369,15 @@
                   <div class="card-body">
                   JR González-Castillo, O Vigil-Galán, E Rodríguez, D Jiménez-Olarte, JJ Leal,<a href="https://www.sciencedirect.com/science/article/abs/pii/S1369800121003632">"Cu6Sn5 binary phase as a precursor material of the CZTSe compound: Optimization of the synthesis process, physical properties and its performance as an absorbing material in a solar cell"</a>,
                   Review ,Materials Science in Semiconductor Processing, volume 134 , pages 106016, Pergamon Editor,2021.</div>
+                  <div class="card-body">
+                    Yair Lozano-Hernández, Victor G Sánchcz-Meza, Carlos A Castillo-Ortiz, Hugo Rodríguez-Cortés, Oscar O Guitiérrez-Frías<a href="https://ieeexplore.ieee.org/abstract/document/9647054/">"Rejection of Disturbances due to Drag and Lift Forces Present in the Taking Off of SUAVI-type UAV"</a>,
+                    Conference 2021 IEEE URUCON, pages 444-449, IEEE Editor,2021.</div>
+                    <div class="card-body">
+                      Luis F López-Cortés, Yair Lozano-Hernández, Lizeth Torres, José F Guerrero-Castellanos, José A Aguirre-Anaya<a href="https://ieeexplore.ieee.org/abstract/document/9896419/">"Comparison of dynamic model-based control algorithms for trajectory tracking in an omnidirectional robot"</a>,
+                      Conference 2021 International Conference on Mechatronics, Electronics and Automotive Engineering (ICMEAE), pages 60-65, IEEE Editor,2021.</div>
+                      <div class="card-body"> 
+                      Alan D Cerezo-Pacheco, César A Pérez-Velasco, Yair Lozano-Hernández, Hugo Rodríguez-Cortés, Victor G Sánchez-Meza<a href="https://ieeexplore.ieee.org/abstract/document/9896430">"Integration of X-Plane and Matlab for modeling and simulation of a tiltrotor UAV"</a>,
+                        Conference 2021 International Conference on Mechatronics, Electronics and Automotive Engineering (ICMEAE), pages 39-44, IEEE Editor,2021.</div>
                  
               </div>
               </div>
@@ -267,7 +398,7 @@
                 Publisher ICBI-BD-UAEH, 2020.
                   </div>
                 <div class="card-body">
-                 Macaria Hernández Chávez, In the aleph section<a href="index.html">"Idustry 4.0 in Agriculture and automotive Engineering"</a>,
+                 Macaria Hernández Chávez, In the aleph section<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=gEwyIXYAAAAJ&citation_for_view=gEwyIXYAAAAJ:ufrVoPGSRksC">"Idustry 4.0 in Agriculture and automotive Engineering"</a>,
                 Journal Educational Innovation, Volume 20, Issue 2, Pages 164, 2020.
                 </div>
                 <div class="card-body">
@@ -275,7 +406,7 @@
                  Journal Educational Innovation/Educational Innovation Magazine, Volume 20, Issue 82,2020.
                  </div>
                  <div class="card-body">
-                Karen Roa-Tort, Josué D Rivera-Fernández, José M de la Rosa-Vázquez, Galileo Escobedo, Suren Stolik, Alma Valor, Diego A Fabila-Bustos<a href="index.html">"Fluorescence spectroscopy on paraffin-preserved human liver samples to classify several grades of fibrosis"</a>,
+                Karen Roa-Tort, Josué D Rivera-Fernández, José M de la Rosa-Vázquez, Galileo Escobedo, Suren Stolik, Alma Valor, Diego A Fabila-Bustos<a href="https://www.sciencedirect.com/science/article/abs/pii/S1386142520307162">"Fluorescence spectroscopy on paraffin-preserved human liver samples to classify several grades of fibrosis"</a>,
                Review Spectrochimica Acta Part A: Molecular and Biomolecular spectroscopy, Volume 242, Pages 118737, Editor Elsevier,2020.
                  </div>
                  <div class="card-body">
@@ -285,7 +416,15 @@
                  <div class="card-body">
                   J Sastré-Hernández, R Mendoza-Pérez, ML Albor-Aguilera, D Jiménez-Olarte, G Santana, M Tufiño-Velázquez, A Morales-Acevedo, G Contreras-Puente,<a href="https://www.researchgate.net/profile/Daniel-Jimenez-Olarte/publication/353139055_SYSTEMATIZED_AND_SIMPLIFIED_PROCESSING_OF_CuInGaSe_2_THIN_FILMS_TO_BE_APPLIED_ON_SOLAR_CELLS/links/60e8f0fa0fbf460db8f5d920/SYSTEMATIZED-AND-SIMPLIFIED-PROCESSING-OF-CuInGaSe-2-THIN-FILMS-TO-BE-APPLIED-ON-SOLAR-CELLS.pdf">"Systematized and simplified processing of cuingase2 thin films to be applied on solar cells"</a>,
                   Review Chalcogenide Letters, Volume 17, Number 2, Pages 69-76, Editor National Institute R and D of Materials Physics,2020.</div>
-              </div>
+                  <div class="card-body">
+                    Victor G Sánchez-Meza, Yair Lozano-Hernández, Oscar O Gutiérrez-Frías<a href="https://ieeexplore.ieee.org/abstract/document/9359410/">"Modeling and Control of a Two DOF Helicopter with Tail Rotor Disturbances"</a>,
+                   Review 2020 International Conference on Mechatronics, Pages 79-84, IEEE Editor, 2020.
+                   </div>
+                   <div class="card-body">
+                    José Antonio Ortega Pérez, Rosalba Galván Guerra, Yair Lozano Hernández, Juan Eduardo Velázquez Velázquez, Luis Armando Villamar Martínez<a href="https://ieeexplore.ieee.org/abstract/document/9299211/">"Charge of LiPo Batteries via Switched Saturated Super-Twisting Algorithm"</a>,
+                   Conference 2020 17th International Conference on Electrical Engineering, Computing Science and Automatic Control (CCE), Pages 1-6, IEEE Editor, 2020.
+                   </div>
+                </div>
             </div>
             <div class="card">
               <div class="card-header">
@@ -314,6 +453,11 @@
                   Development of a CdCl2 thermal treatment process for improving CdS/CdTe ultrathin solar cells"</a>, Review  Journal of Materials Science: Materials in Electronics, Volume 30, Pages 16932-16938, Editor Springer , 2019.
              
             </div>
+            <div class="card-body">
+                 
+              Y Lozano, O Gutiérrez,<a href="https://ieeexplore.ieee.org/abstract/document/7795811">"Design and Control of a Four-Rotary-Wing Aircraft"</a>,
+             Review IEEE Latin America Transactions, vol 14, Number 11, Pages 4433-4438, Editor IEEE, 2019.
+          </div>
             </div>
             <div id="accordion">
               <h1 class="titule">Tesis</h1>
@@ -374,6 +518,57 @@
           </div>
           
         </div>
+        <div id="accordion">
+          <h1 class="titule">Patents</h1>
+        <div class="card">
+          <div class="card-header">
+            
+            <a class="btn bi bi-chevron-compact-right" data-bs-toggle="collapse" href="#collapseOne" id="collapse-card">
+             2019
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show " data-bs-parent="#accordion">
+            <div class="card-body">
+              José M. de la Rosa-Vázquez, Alma R. Valor-Reed, Diego A. Fabila Bustos, Karen Roa-Tort, Josué D. Rivera-Fernández, Suren Stolik-Isakina, Eustacio Galileo Escobedo González. “Spectral system to determine the degree of injury in biological tissue.” Mexican Institute of Industrial Property MX/a/2019/014900. Patent request.
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn bi bi-chevron-compact-right" data-bs-toggle="collapse" href="#collapseTwo">
+            2018
+          </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              José M. de la Rosa-Vázquez, Alma R. Valor-Reed, Suren Stolik-Isakina, Diego A. Fabila Bustos, Josué D. Rivera-Fernández, Karen Roa-Tort. “Rotating semi-automatic light emitter exchanger system activated by pedal.” Mexican Institute of Industrial Property. Patent Title: 376169. CIP: F21V9/00 CPC: F21V9/30, MX/a/2018/008249.
+            </div>
+            <div class="card-body">
+              Suren Stolik-Isakina, José M. de la Rosa-Vázquez, Alma R. Valor-Reed, Diego A. Fabila Bustos, LF de Jesús Hernández-Quintanar, Orestes M. Morales-López, Alejandro de la Cadena Peréz-Gallardo . “System for determining the pressure exerted by a fiber optic reflectance spectroscopy probe.” Mexican Institute of Industrial Property. Patent Title: 375017. CIP: G01N21/01; G01N21/47, CPC: G01N21/01; G01N21/47. MX/a/2018/00810.
+            </div>
+            <div class="card-body">
+              Suren Stolik-Isakina, José M. de la Rosa-Vázquez, Diego A. Fabila Bustos, LF de Jesús Hernández-Quintanar. “System for the insertion of a modified optical fiber for the application of interstitial phototherapy.” Mexican Institute of Industrial Property MX/a/2018/003508.
+            </div>
+            
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn bi bi-chevron-compact-right" data-bs-toggle="collapse" href="#collapseFour">
+             2017
+            </a>
+          </div>
+          <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              Suren Stolik-Isakina, José M. de la Rosa-Vázquez, Alma R. Valor-Reed, Diego A. Fabila Bustos, LF de Jesús Hernández-Quintanar, Fulgencio Jonadab López Silva, Orestes M. Morales-López, Joel Serrano Navarro and Wolfgang Axel Tomé. “Automatic photoirradiation system for cell cultures with control of power density and temperature.” Mexican Institute of Industrial Property MX/a/2017/004402
+            </div>
+        </div>
+
+      </div>
+      
+    </div>
+    
         
 
       </div>

@@ -93,28 +93,110 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People</a>
                             <div class="dropdown-menu m-0">
                                 <a href="team.html" class="dropdown-item">Principal Investigators</a>
-                                <a href="graduatedStudents.html" class="dropdown-item">Graduated Students</a>
-                                <a href="underGraduatedStudents.html" class="dropdown-item">UnderGraduated Students</a>
-                                <a href="#" class="dropdown-item">Co-Investigators</a>
-                              
-                                <a href="#" class="dropdown-item">Exchange students</a>
-                                <a href="#" class="dropdown-item">Practicant Students</a>
-                                <a href="#" class="dropdown-item">Other collaborators</a>
+                                <a href="graduatedStudent.html" class="dropdown-item">Graduate Students</a>
+                                <a href="underGraduateStudents.html" class="dropdown-item">Under Graduate Students</a>
+                                <a href="visitStudents.html" class="dropdown-item">Visit Students</a>
+                                <a href="Alumni.html" class="dropdown-item">Alumni</a>
             
                             </div>
                         </div>
                     
                     </div>
                     <form class="d-flex" role="search">
-                        <input class="form-control-me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control-me-2" type="search" placeholder="You want to look for?" aria-label="Search" id="searchInput">
+                        
                         <button class="btn-btn-outline-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="search-button" viewBox="0 0 16 16" id="searchButton">
                           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                         </svg></button>
                         
-                      </form>  
+                      </form> 
                       
                 </div>
             </nav>
+            <script>
+                //Creando filtrado de busqueda
+
+                document.getElementById("searchButton").addEventListener("click",function(){
+                    var searchTerm=document.getElementById("searchInput").value.toLowerCase();
+                    //creando variable para localizacion de noticias
+                    if (searchTerm =="news"||searchTerm=="NEWS"||searchTerm=="new"||searchTerm=="NEW"||
+                        searchTerm=="noticias"||searchTerm=="NOTICIAS"||searchTerm=="noticia"||searchTerm=="Noticia"){
+                        window.location.href="news3.html";
+                    }
+                    if (searchTerm=="publications"||searchTerm=="Publications"||searchTerm=="PUBLICATIONS"||searchTerm=="article"||searchTerm=="thesis"||searchTerm=="Article"||searchTerm=="Thesis"||searchTerm=="Patents"||searchTerm=="patents"||
+                        searchTerm=="publicacion"||searchTerm=="Publicaciones"||searchTerm=="publicación"||searchTerm=="Publicación"||searchTerm=="tesis"||searchTerm=="Artículo"||searchTerm=="artículo"||searchTerm=="TESIS"||searchTerm=="ARTICULO"||searchTerm=="PATENTES"||searchTerm=="Patente"||searchTerm=="patente")
+                    {
+                        window.location.href="publications.html";
+                    }
+                    if(searchTerm =="events"||searchTerm=="EVENTS"||searchTerm=="Event"||searchTerm=="EVENT"||searchTerm=="event"){
+                        window.location.href="events.html";
+                    }
+                    if (searchTerm =="open positions"|| searchTerm=="Open Positions"||searchTerm=="OPEN POSITIONS"||searchTerm=="openpositions"||searchTerm=="OPENPOSITIONS"){
+                        window.location.href="openpositions.html";
+                    }
+                    if(searchTerm=="galeries" || searchTerm =="GALERIES"|| searchTerm=="Galeries"||searchTerm=="photos"||searchTerm=="PHOTOS" || searchTerm=="photo"||searchTerm=="PHOTO"){
+                        window.location.href="galeries.html";
+                    }
+                    if(searchTerm=="principal investigator"||searchTerm=="Principal Investigator"||searchTerm=="PRINCIPAL INVESTIGATOR"||searchTerm=="principalinvestigator"||searchTerm=="investigators")
+                    {
+                        window.location.href="team.html";
+                    }
+                   //filtrando a los investigadores 
+                if(searchTerm=="Dra.Macaría Hernández Chávez"||searchTerm=="Macaría Hernández Chávez"||searchTerm=="MacaríaHernándezChávez"||searchTerm=="MACARIAHERNANDEZCHAVEZ"||searchTerm=="MACARIA HERNADEZ CHAVEZ"||searchTerm=="macaria hernandez chavez"||searchTerm=="macariahernandezchavez"||searchTerm=="macaria"||searchTerm=="Macaria")
+                {
+                        window.location.href="macariaHernandezChavez.html";
+                    }
+                    {
+                if (searchTerm=="Dr.Diego Adrián Fábila Bustos"||searchTerm=="Diego Adrián Fábila Bustos"||searchTerm=="DiegoAdriánFábilaBustos"||searchTerm=="Diego"||searchTerm=="diegoadrianfabilabustos")
+                        window.location.href="diegoAdrianFabilaBustos.html";
+                    }
+                if(searchTerm=="Dr.Luis Felipe de Jesús Quintanar"||searchTerm=="Luis Felipe de Jesús Quintanar"||searchTerm=="LuisFelipedeJesúsQuintanar"||searchTerm=="LUIS FELIPE DE JESUS QUINTANAR"||searchTerm=="luis felipe de jesús quintanar"||searchTerm=="luisfelipedejesúsquintanar"||searchTerm=="Luis Felipe"||searchTerm=="Luis"||searchTerm=="LUIS")
+                {
+                        window.location.href="luisFelipe.html";
+                    }
+                    if(searchTerm=="Dra.Karen Roa Tort "||searchTerm=="Karen Roa Tort "||searchTerm=="KarenRoaTort"||searchTerm=="KAREN ROA TORT"||searchTerm=="KARENROATORT"||searchTerm=="luisfelipedejesúsquintanar"||searchTerm=="karen"||searchTerm=="Karen"||searchTerm=="KAREN")
+                {
+                        window.location.href="karenRoa.html";
+                    }
+                    if(searchTerm=="Dr.Ian Ilizaliturri Flores "||searchTerm=="Ian Ilizaliturri Flores"||searchTerm=="IanIlizaliturriFlores"||searchTerm=="IAN ILIZALITURRI FLORES"||searchTerm=="IANILIZALITURRIFLORES"||searchTerm=="Ian"||searchTerm=="doctor ian"||searchTerm=="Doctor ian"||searchTerm=="Ian Ilizaliturri")
+                {
+                        window.location.href="ianilizaliturriFlores.html";
+                    }
+                    if(searchTerm=="Dr.Daniel Jiménez Olarte"||searchTerm=="Daniel Jiménez Olarte"||searchTerm=="DanielJiménezOlarte"||searchTerm=="DANIELJIMENEZOLARTE"||searchTerm=="DANIEL JIMENEZ OLARTE"||searchTerm=="doctor daniel"||searchTerm=="Doctor daniel"||searchTerm=="Daniel"||searchTerm=="daniel")
+                {
+                        window.location.href="ianilizaliturriFlores.html";
+                    }
+                    if(searchTerm=="Dr.Josué Daniel Rivera Fernandez"||searchTerm=="Josué Daniel Rivera Fernandez"||searchTerm=="JosuéDanielRiveraFernandez"||searchTerm=="JOSUE DANIEL RIVERA FERNANDEZ"||searchTerm=="JOSUEDANIELRIVERAFERNANDEZ"||searchTerm=="doctor Josué "||searchTerm=="Doctor Josué "||searchTerm=="Josué Daniel"||searchTerm=="josuedaniel")
+                {
+                        window.location.href="josueDaniel.html";
+                    }
+                    if(searchTerm=="Dr.Yahir Lozano Hernández"||searchTerm=="Yahir Lozano Hernández"||searchTerm=="YahirLozanoHernández"||searchTerm=="Yahir Lozano Hernandez"||searchTerm=="yahir lozano hernandez"||searchTerm=="doctor yahir "||searchTerm=="Doctor yahir lozano "||searchTerm=="Lozano"||searchTerm=="lozanohernandez")
+                {
+                        window.location.href="yahirLozanoHernandez.html";
+                    }
+                    //filtrando el resto de las busquedas
+                    if(searchTerm=="Graduate Students"||searchTerm=="graduate students"||searchTerm=="GRADUATESTUDENTS"||searchTerm=="estudiantes graduados"||searchTerm=="Estudiantesgraduados"||searchTerm=="estudiantesgraduados"||searchTerm=="graduados"||searchTerm=="Graduados"||searchTerm=="postgrado")
+                {
+                        window.location.href="graduatedStudent.html";
+                    }
+                    if(searchTerm=="Under Graduate Students"||searchTerm=="under graduate students"||searchTerm=="UNDER GRADUATE STUDENTS"||searchTerm=="estudiantes no graduados "||searchTerm=="Estudiantes"||searchTerm=="Under Graduate Students"||searchTerm=="UNDERGRADUATESTUDENTS"||searchTerm=="undergraduatestudents"||searchTerm=="estudiantes")
+                {
+                        window.location.href="underGraduateStudents.html";
+                    }
+                    if(searchTerm=="visitStudents"||searchTerm=="Visit Students"||searchTerm=="visit students"||searchTerm=="Visit Students"||searchTerm=="Estudiantes visitantes"||searchTerm=="estudiantes visitantes"||searchTerm=="practicantes"||searchTerm=="Practicantes"||searchTerm=="PRACTICANTES")
+                {
+                        window.location.href="visitStudents.html";
+                    }
+                    if(searchTerm=="alumni"||searchTerm=="oldstudents"||searchTerm=="ALUMNI"||searchTerm=="antiguos alumnos"||searchTerm=="Alumni"||searchTerm=="estudiantes egresados"||searchTerm=="Egresados"||searchTerm=="EGRESADOS"||searchTerm=="estudiantes egresados")
+                {
+                        window.location.href="Alumni.html";
+                    }
+                    
+
+                })
+
+            
+                            </script>
 
 
 
@@ -125,7 +207,7 @@
         <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item active text-primary"><a href="team.html">Team</a></li>
-            <li class="breadcrumb-item active text-primary"><a href="graduatedStudents.html">Students</a></li>
+            <li class="breadcrumb-item active text-primary"><a href="graduatedStudent.html">Students</a></li>
         </ol>    
     </div>
 </div>
@@ -145,19 +227,20 @@
                 <div class="row g-4 justify-content-center">
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item rounded">
-                                <a href="diegoAdrianFabilaBustos.html"><img src="img/drDiegoAdrian.png" class="img-fluid rounded-top w-100" alt="" width="134px" height="134px"></a>
+                                <a href="diegoAdrianFabilaBustos.html"><img src="img/Professor/Dr.Diego1.png" class="img-fluid rounded-top w-100" alt="" width="134px" height="145px"></a>
                                
                             </div>
                             <div class="team-content text-center border border-white border-top-0 rounded-bottom p-4">
-                                <a href="diegoAdrianFabilaBustos.html"><h5 class="names">Dr.Diego Adrian Fabila Bustos</h5></a>
+                                <a href="diegoAdrianFabilaBustos.html"><h5 class="names">Dr.Diego Adrián Fábila Bustos</h5></a>
                                 
                                 <h4 class="mb-0" >Proffesor</h4>
-                                <p class="justify-content-center">Bionic Engineer|MSc electronic engineering|Communications Doctorate </p>
+                                <p class="justify-content-center">Bionic Engineer </p>
                                 <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:dfabib@ipn.mx"><i class="bi bi-envelope-at"></i></a>
+                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:dfabib@ipn.mx"><i class="bi bi-envelope-at"></i></a><label>dfabib@ipn.mx</label>
                               
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=ngi81PwAAAAJ&hl=es"><i class="bi bi-google"></i></a>
+                                    <!--<a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=ngi81PwAAAAJ&hl=es"><i class="bi bi-google"></i></a>
                                     <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://www.dev.desarrolloweb.ipn.mx/assets/files/sepi-upiih/docs/Semblanzas/SemblanzaDAFB.pdf"><i class="bi bi-info-lg"></i></a>
+                                    -->
                                 </div>
                             </div>
                         </div>
@@ -168,34 +251,36 @@
                                     
                                 </div>
                                 <div class="team-content text-center border border-white border-top-0 rounded-bottom p-4">
-                                    <a href="macariaHernandezChavez.html"><h5 class="names">Dra. Macaria Hernandez Chavez</h5></a>
+                                    <a href="macariaHernandezChavez.html"><h5 class="names">Dra. Macaría Hernández Chávez</h5></a>
                                     <h4 class="mb-0">Proffesor </h4>
-                                    <p>Chemical Degree|MSc Science</p><p> Materials Science Doctorate</p>
+                                    <p>Chemical female Engineer</p>
                                     <div class="team-icon d-flex justify-content-center">
-                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:mhernandezch@ipn.mx"><i class="bi bi-envelope-at"></i></a>
+                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:mhernandezch@ipn.mx"><i class="bi bi-envelope-at"></i></a><label>mhernandezch@ipn.mx</label>
                                   
-                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com/citations?user=gEwyIXYAAAAJ&hl=en"><i class="bi bi-google"></i></a>
+                                        <!--<a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com/citations?user=gEwyIXYAAAAJ&hl=en"><i class="bi bi-google"></i></a>
                                         <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://www.dev.desarrolloweb.ipn.mx/assets/files/sepi-upiih/docs/Semblanzas/SemblanzaMHC.pdf"><i class="bi bi-info-lg"></i></a>
+                                        -->
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
                                 <div class="team-item rounded ">
                                     
-                                        <a href="luisFelipe.html"><img src="img/dr.LuisFelipedeJesusQuintanar3.jpg" class="img-fluid rounded-top w-100" alt=""></a>
+                                        <a href="luisFelipe.html"><img src="img/Professor/dr.LuisFelipedeJesusQuintanar3 (1).png" class="img-fluid rounded-top w-100" alt=""></a>
                                        
                                     </div>
                                     <div class="team-content text-center border border-white border-top-0 rounded-bottom p-4">
                                         
-                                        <a href="luisFelipe.html"><h5 class="names">Dr. Luis Felipe de Jesus Quintanar</h5></a>
+                                        <a href="luisFelipe.html"><h5 class="names">Dr. Luis Felipe de Jesús Quintanar</h5></a>
                                         <h4 class="mb-0">Proffesor</h4>
-                                        <p>Bionic Engineer|MSc electronic engineering|D.Comunications and electronics</p>
+                                        <p>Bionic Engineer</p>
                                       
                                         <p></p>
                                         <div class="team-icon d-flex justify-content-center">
-                                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:lhernandezq@ipn.mx"><i class="bi bi-envelope-at"></i></a>
-                                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://ipn.elsevierpure.com/es/persons/luis-felipe-de-jes%C3%BAs-hern%C3%A1ndez"><i class="bi bi-google"></i></a>
+                                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:lhernandezq@ipn.mx"><i class="bi bi-envelope-at"></i></a><label>lhernandezq@ipn.mx</label>
+                                            <!--<a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://ipn.elsevierpure.com/es/persons/luis-felipe-de-jes%C3%BAs-hern%C3%A1ndez"><i class="bi bi-google"></i></a>
                                             <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://www.dev.desarrolloweb.ipn.mx/assets/files/sepi-upiih/docs/Semblanzas/SemblanzaLFJHQ.pdf"><i class="bi bi-info-lg"></i></a>
+                                            -->
                                         </div>
                                         
                                     </div>
@@ -203,7 +288,7 @@
                                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="team-item rounded">
                                       
-                                            <a href="karenRoa.html"><img src="img/Dra.Karen Roa Tort (3).jpeg"class="img-fluid rounded-top w-100" alt=""></a>
+                                            <a href="karenRoa.html"><img src="img/Professor/Dra.Karen Roa Tort (3).png"class="img-fluid rounded-top w-100" alt=""></a>
                                            
                                         </div>
                                         <div class="team-content text-center border border-white border-top-0 rounded-bottom p-4">
@@ -212,20 +297,21 @@
                                             
                                             
                                             <h4 class="mb-0" >Investigator</h4>
-                                            <p>Mechatronics Engineer|MSc Communications</p>
-                                            <p>D.Communications and electronic</p>
+                                            <p>Mechatronics Female Engineer</p>
+                                            
                                             <div class="team-icon d-flex justify-content-center">
-                                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:kroat@ipn.mx"><i class="bi bi-envelope-at"></i></a>
+                                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:kroat@ipn.mx"><i class="bi bi-envelope-at"></i></a><label>kroat@ipn.mx</label>
                                           
-                                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=97f24VUAAAAJ&hl=es"><i class="bi bi-google"></i></a>
+                                               <!--- <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=97f24VUAAAAJ&hl=es"><i class="bi bi-google"></i></a>
                                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://www.dev.desarrolloweb.ipn.mx/assets/files/sepi-upiih/docs/CVU/CVU_KRT.pdf"><i class="bi bi-info-lg"></i></a>
+                                               -->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="team-item rounded">
                                           
-                                                <a href="ianIlizaliturriFlores.html"><img src="img/dr.IanIlizaliturriFlores (1).jpg"class="img-fluid rounded-top w-100" alt=""></a>
+                                                <a href="ianIlizaliturriFlores.html"><img src="img/Professor/dr.IanIlizaliturriFlores (1).png"class="img-fluid rounded-top w-100" alt=""></a>
                                                
                                             </div>
                                             <div class="team-content text-center border border-white border-top-0 rounded-bottom p-4">
@@ -233,13 +319,14 @@
                                                 <a href="ianIlizaliturriFlores.html"><h5 class="names">Dr. Ian Ilizariturri Flores</h5></a>
                                                
                                                 
-                                                <h5 class="mb-0" >Investigator</h5>
-                                                <p>Communications,electronic engineer|MSc compute technologhy|D.Biotechnology sciences</p>
+                                                <h4 class="mb-0" >Investigator</h4>
+                                                <p>Communications and electronic engineer</p>
                                                 <div class="team-icon d-flex justify-content-center">
-                                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:kroat@ipn.mx"><i class="bi bi-envelope-at"></i></a>
+                                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:iflores@ipn.mx"><i class="bi bi-envelope-at"></i></a> <label>iflores@ipn.mx</label>
                                               
-                                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=97f24VUAAAAJ&hl=es"><i class="bi bi-google"></i></a>
+                                                    <!--<a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=97f24VUAAAAJ&hl=es"><i class="bi bi-google"></i></a>
                                                     <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://www.dev.desarrolloweb.ipn.mx/assets/files/sepi-upiih/docs/CVU/CVU_KRT.pdf"><i class="bi bi-info-lg"></i></a>
+                                                    -->
                                                 </div>
                                             </div>
                         </div>
@@ -252,13 +339,14 @@
                                 <div class="team-content text-center border border-white border-top-0 rounded-bottom p-4">
                 
                                     <a href="danielJimenez.html"><h5 class="names">Dr. Daniel Jiménez Olarte</h5></a>
-                                    <h5 class="mb-0" >Investigator</h5>
-                                    <p>Fisics and Mathematics Degree|MSc.Fisic|D.Materials Fisic.</p>
+                                    <h4 class="mb-0" >Investigator</h4>
+                                    <p>Fisics and Mathematics Engineer</p>
                                     <div class="team-icon d-flex justify-content-center">
-                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:kroat@ipn.mx"><i class="bi bi-envelope-at"></i></a>
+                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:dajimenez@ipn.mx"><i class="bi bi-envelope-at"></i></a><label>dajimenez@ipn.mx</label>
                                   
-                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=97f24VUAAAAJ&hl=es"><i class="bi bi-google"></i></a>
+                                       <!--- <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=97f24VUAAAAJ&hl=es"><i class="bi bi-google"></i></a>
                                         <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://www.dev.desarrolloweb.ipn.mx/assets/files/sepi-upiih/docs/CVU/CVU_KRT.pdf"><i class="bi bi-info-lg"></i></a>
+                                       -->
                                     </div>
                                 </div>
                      
@@ -267,7 +355,7 @@
                         <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="team-item rounded">
                               
-                                <a href="josueDaniel.html"><img src="img/Josue-Rivera-Fernandez (1).png"class="img-fluid rounded-top w-100" alt=""></a>
+                                <a href="josueDaniel.html"><img src="img/Professor/Josue-Rivera-Fernandez (1).png"class="img-fluid rounded-top w-100" alt=""></a>
                                    
                                 </div>
                                 <div class="team-content text-center border border-white border-top-0 rounded-bottom p-4">
@@ -276,18 +364,39 @@
                                         <a href=""><h5 class="names">Rivera Fernandez</h5></a>
                                     
                                     
-                                    <h5 class="mb-0" >Investigator</h5>
-                                    <p>Mechatronic Engineer|MSc electronic engineer</p>
+                                    <h4 class="mb-0" >Investigator</h4>
+                                    <p></p>
+                                    <p>Mechatronic Engineer</p>
                                     <div class="team-icon d-flex justify-content-center">
-                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:kroat@ipn.mx"><i class="bi bi-envelope-at"></i></a>
+                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:jdriveraf@ipn.mx"><i class="bi bi-envelope-at"></i></a><label>jdriveraf@ipn.mx</label>
                                   
-                                        <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=97f24VUAAAAJ&hl=es"><i class="bi bi-google"></i></a>
+                                        <!--<a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com.mx/citations?user=97f24VUAAAAJ&hl=es"><i class="bi bi-google"></i></a>
                                         <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://www.dev.desarrolloweb.ipn.mx/assets/files/sepi-upiih/docs/CVU/CVU_KRT.pdf"><i class="bi bi-info-lg"></i></a>
+                                        -->
                                     </div>
                                 </div>
                      
                         
     </div> 
+    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="team-item rounded">
+            
+                <a href="yahirLozanoHernandez.html"><img src="img/Professor/dr.YahirLozano (2).png" class="img-fluid rounded-top w-100" alt="" width="134px" height="134px"></a>
+                
+            </div>
+            <div class="team-content text-center border border-white border-top-0 rounded-bottom p-4">
+                <a href="yahirLozanoHernandez.html.html"><h5 class="names">Dr.Yahir Lozano Hernández</h5></a>
+                <h4 class="mb-0">Proffesor </h4>
+                <p>B.S.degree in Control and Automation</p>
+                <div class="team-icon d-flex justify-content-center">
+                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="mailto:ylozanoh@ipn.mx"><i class="bi bi-envelope-at"></i></a><label>ylozanoh@ipn.mx</label>
+              
+                    <!--<a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://scholar.google.com/citations?user=gEwyIXYAAAAJ&hl=en"><i class="bi bi-google"></i></a>
+                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href="https://www.dev.desarrolloweb.ipn.mx/assets/files/sepi-upiih/docs/Semblanzas/SemblanzaMHC.pdf"><i class="bi bi-info-lg"></i></a>
+                    -->
+                </div>
+            </div>
+        </div>
                 
 
 
@@ -302,7 +411,6 @@
                         
                     </div>
                      <!-- Back to Top --> 
-        <a href="people2.html" class="btn btn-primary btn-lg-square "><i class="bi bi-chevron-double-right"></i></a>  
                 </div>
             </div>
         </div>

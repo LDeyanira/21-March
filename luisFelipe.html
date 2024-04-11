@@ -95,28 +95,110 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People</a>
                             <div class="dropdown-menu m-0">
                                 <a href="team.html" class="dropdown-item">Principal Investigators</a>
-                                <a href="graduatedStudents.html" class="dropdown-item">Graduated Students</a>
-                                <a href="underGraduatedStudents.html" class="dropdown-item">UnderGraduated Students</a>
-                                <a href="internationalbonded.html" class="dropdown-item">Co-Investigators</a>
-                                
-                                <a href="internationalbonded.html" class="dropdown-item">Exchange students</a>
-                                <a href="internationalbonded.html" class="dropdown-item">Practicant Students</a>
-                                <a href="#" class="dropdown-item">Other collaborators</a>
+                                <a href="graduatedStudent.html" class="dropdown-item">Graduate Students</a>
+                                <a href="underGraduateStudents.html" class="dropdown-item">Under Graduate Students</a>
+                                <a href="visitStudents.html" class="dropdown-item">Visit Students</a>
+                                <a href="Alumni.html" class="dropdown-item">Alumni</a>
             
                             </div>
                         </div>
                     
                     </div>
                     <form class="d-flex" role="search">
-                        <input class="form-control-me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control-me-2" type="search" placeholder="You want to look for?" aria-label="Search" id="searchInput">
+                        
                         <button class="btn-btn-outline-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="search-button" viewBox="0 0 16 16" id="searchButton">
                           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                         </svg></button>
                         
-                      </form>  
+                      </form> 
                       
                 </div>
             </nav>
+            <script>
+                //Creando filtrado de busqueda
+
+                document.getElementById("searchButton").addEventListener("click",function(){
+                    var searchTerm=document.getElementById("searchInput").value.toLowerCase();
+                    //creando variable para localizacion de noticias
+                    if (searchTerm =="news"||searchTerm=="NEWS"||searchTerm=="new"||searchTerm=="NEW"||
+                        searchTerm=="noticias"||searchTerm=="NOTICIAS"||searchTerm=="noticia"||searchTerm=="Noticia"){
+                        window.location.href="news3.html";
+                    }
+                    if (searchTerm=="publications"||searchTerm=="Publications"||searchTerm=="PUBLICATIONS"||searchTerm=="article"||searchTerm=="thesis"||searchTerm=="Article"||searchTerm=="Thesis"||searchTerm=="Patents"||searchTerm=="patents"||
+                        searchTerm=="publicacion"||searchTerm=="Publicaciones"||searchTerm=="publicación"||searchTerm=="Publicación"||searchTerm=="tesis"||searchTerm=="Artículo"||searchTerm=="artículo"||searchTerm=="TESIS"||searchTerm=="ARTICULO"||searchTerm=="PATENTES"||searchTerm=="Patente"||searchTerm=="patente")
+                    {
+                        window.location.href="publications.html";
+                    }
+                    if(searchTerm =="events"||searchTerm=="EVENTS"||searchTerm=="Event"||searchTerm=="EVENT"||searchTerm=="event"){
+                        window.location.href="events.html";
+                    }
+                    if (searchTerm =="open positions"|| searchTerm=="Open Positions"||searchTerm=="OPEN POSITIONS"||searchTerm=="openpositions"||searchTerm=="OPENPOSITIONS"){
+                        window.location.href="openpositions.html";
+                    }
+                    if(searchTerm=="galeries" || searchTerm =="GALERIES"|| searchTerm=="Galeries"||searchTerm=="photos"||searchTerm=="PHOTOS" || searchTerm=="photo"||searchTerm=="PHOTO"){
+                        window.location.href="galeries.html";
+                    }
+                    if(searchTerm=="principal investigator"||searchTerm=="Principal Investigator"||searchTerm=="PRINCIPAL INVESTIGATOR"||searchTerm=="principalinvestigator"||searchTerm=="investigators")
+                    {
+                        window.location.href="team.html";
+                    }
+                   //filtrando a los investigadores 
+                if(searchTerm=="Dra.Macaría Hernández Chávez"||searchTerm=="Macaría Hernández Chávez"||searchTerm=="MacaríaHernándezChávez"||searchTerm=="MACARIAHERNANDEZCHAVEZ"||searchTerm=="MACARIA HERNADEZ CHAVEZ"||searchTerm=="macaria hernandez chavez"||searchTerm=="macariahernandezchavez"||searchTerm=="macaria"||searchTerm=="Macaria")
+                {
+                        window.location.href="macariaHernandezChavez.html";
+                    }
+                    {
+                if (searchTerm=="Dr.Diego Adrián Fábila Bustos"||searchTerm=="Diego Adrián Fábila Bustos"||searchTerm=="DiegoAdriánFábilaBustos"||searchTerm=="Diego"||searchTerm=="diegoadrianfabilabustos")
+                        window.location.href="diegoAdrianFabilaBustos.html";
+                    }
+                if(searchTerm=="Dr.Luis Felipe de Jesús Quintanar"||searchTerm=="Luis Felipe de Jesús Quintanar"||searchTerm=="LuisFelipedeJesúsQuintanar"||searchTerm=="LUIS FELIPE DE JESUS QUINTANAR"||searchTerm=="luis felipe de jesús quintanar"||searchTerm=="luisfelipedejesúsquintanar"||searchTerm=="Luis Felipe"||searchTerm=="Luis"||searchTerm=="LUIS")
+                {
+                        window.location.href="luisFelipe.html";
+                    }
+                    if(searchTerm=="Dra.Karen Roa Tort "||searchTerm=="Karen Roa Tort "||searchTerm=="KarenRoaTort"||searchTerm=="KAREN ROA TORT"||searchTerm=="KARENROATORT"||searchTerm=="luisfelipedejesúsquintanar"||searchTerm=="karen"||searchTerm=="Karen"||searchTerm=="KAREN")
+                {
+                        window.location.href="karenRoa.html";
+                    }
+                    if(searchTerm=="Dr.Ian Ilizaliturri Flores "||searchTerm=="Ian Ilizaliturri Flores"||searchTerm=="IanIlizaliturriFlores"||searchTerm=="IAN ILIZALITURRI FLORES"||searchTerm=="IANILIZALITURRIFLORES"||searchTerm=="Ian"||searchTerm=="doctor ian"||searchTerm=="Doctor ian"||searchTerm=="Ian Ilizaliturri")
+                {
+                        window.location.href="ianilizaliturriFlores.html";
+                    }
+                    if(searchTerm=="Dr.Daniel Jiménez Olarte"||searchTerm=="Daniel Jiménez Olarte"||searchTerm=="DanielJiménezOlarte"||searchTerm=="DANIELJIMENEZOLARTE"||searchTerm=="DANIEL JIMENEZ OLARTE"||searchTerm=="doctor daniel"||searchTerm=="Doctor daniel"||searchTerm=="Daniel"||searchTerm=="daniel")
+                {
+                        window.location.href="ianilizaliturriFlores.html";
+                    }
+                    if(searchTerm=="Dr.Josué Daniel Rivera Fernandez"||searchTerm=="Josué Daniel Rivera Fernandez"||searchTerm=="JosuéDanielRiveraFernandez"||searchTerm=="JOSUE DANIEL RIVERA FERNANDEZ"||searchTerm=="JOSUEDANIELRIVERAFERNANDEZ"||searchTerm=="doctor Josué "||searchTerm=="Doctor Josué "||searchTerm=="Josué Daniel"||searchTerm=="josuedaniel")
+                {
+                        window.location.href="josueDaniel.html";
+                    }
+                    if(searchTerm=="Dr.Yahir Lozano Hernández"||searchTerm=="Yahir Lozano Hernández"||searchTerm=="YahirLozanoHernández"||searchTerm=="Yahir Lozano Hernandez"||searchTerm=="yahir lozano hernandez"||searchTerm=="doctor yahir "||searchTerm=="Doctor yahir lozano "||searchTerm=="Lozano"||searchTerm=="lozanohernandez")
+                {
+                        window.location.href="yahirLozanoHernandez.html";
+                    }
+                    //filtrando el resto de las busquedas
+                    if(searchTerm=="Graduate Students"||searchTerm=="graduate students"||searchTerm=="GRADUATESTUDENTS"||searchTerm=="estudiantes graduados"||searchTerm=="Estudiantesgraduados"||searchTerm=="estudiantesgraduados"||searchTerm=="graduados"||searchTerm=="Graduados"||searchTerm=="postgrado")
+                {
+                        window.location.href="graduatedStudent.html";
+                    }
+                    if(searchTerm=="Under Graduate Students"||searchTerm=="under graduate students"||searchTerm=="UNDER GRADUATE STUDENTS"||searchTerm=="estudiantes no graduados "||searchTerm=="Estudiantes"||searchTerm=="Under Graduate Students"||searchTerm=="UNDERGRADUATESTUDENTS"||searchTerm=="undergraduatestudents"||searchTerm=="estudiantes")
+                {
+                        window.location.href="underGraduateStudents.html";
+                    }
+                    if(searchTerm=="visitStudents"||searchTerm=="Visit Students"||searchTerm=="visit students"||searchTerm=="Visit Students"||searchTerm=="Estudiantes visitantes"||searchTerm=="estudiantes visitantes"||searchTerm=="practicantes"||searchTerm=="Practicantes"||searchTerm=="PRACTICANTES")
+                {
+                        window.location.href="visitStudents.html";
+                    }
+                    if(searchTerm=="alumni"||searchTerm=="oldstudents"||searchTerm=="ALUMNI"||searchTerm=="antiguos alumnos"||searchTerm=="Alumni"||searchTerm=="estudiantes egresados"||searchTerm=="Egresados"||searchTerm=="EGRESADOS"||searchTerm=="estudiantes egresados")
+                {
+                        window.location.href="Alumni.html";
+                    }
+                    
+
+                })
+
+            
+                            </script>
 
 
            
@@ -148,20 +230,11 @@
                        
                         <div class="team-icon-center">
                           
-                            <a class="bi bi-diagram-3-fill" href="">GoogleScholar</a>
-                            <a class="bi bi-envelope-fill" href="">macariach@upiih.com.mx</a>
-                            <a class="bi bi-diagram-3-fill" href="">PubMed</a>
+                            <a class="bi bi-diagram-3-fill" href="https://orcid.org/0000-0002-5485-0268"> Orcid</a>
+                            <a class="bi bi-envelope-fill" href="https://www.scopus.com/authid/detail.uri?authorId=57199653088"> Scopus</a>
+                            <a class="bi bi-diagram-3-fill" href="http://verikosesi.rf.gd"> Personal Web Page</a>
                         </div>
-                        <p class="justify-content-center" style="text-align: center;">Dr. Luis Felipe Hernández Quintanar is a Bionics engineer graduated from the
-                            Interdisciplinary Professional Unit in Engineering and Advanced Technologies
-                            (UPIITA), Master of Science in Electronic Engineering at the Higher School of
-                            Mechanical and Electrical Engineering Zacatenco Unit (ESIME Zac) and Doctor in
-                            Communications and Electronics with a specialty in Photonic Instrumentation in
-                            the ESIME Culhuacán Unit. His line of research is linked to the
-                            applications of Biophotonics in various areas. Currently part of the
-                            National System of Researchers and is a full-time professor Unit
-                            Interdisciplinary Engineering Professional Campus Hidalgo of the Institute
-                            National Polytechnic (UPIIH).
+                        <p class="justify-content-center" style="text-align: center; ">Bionics Engineer graduated from Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas (UPIITA) of the Instituto Politécnico Nacional through the project "Sleep detection system in motorists through the detection of the change in the parameters of their biological signals." He obtained the degree of Master of Science in Electronic Engineering at the Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME) Unidad Zacatenco, IPN, carrying out the project "Development of an irradiation system for Photodynamic Therapy with controlled optical dosimetry." In 2015 he obtained the degree of Doctor in Communications and Electronics with a specialty in biophotonics at the ESIME, Unidad Culhuacan, IPN, with the thesis titled "Experimental system for the evaluation of dosimetry in photodynamic therapy." In 2018 he carried out a research stay at the Instituto Tecnológico de Monterrey, campus Monterrey in Competitive and Technological Intelligence. Since 2019, he has been a member of the teaching staff of the Unidad Profesional Interdisciplinaria en Ingeniería campus Hidalgo.
                         </p>  
                         <h3>Education and Degrees</h3>
                         <ul class="bi bi-chevron-right">Bionic Engineer</ul>
@@ -173,8 +246,10 @@
                         <ul class="bi bi-chevron-right">Research award technological development modality</ul>
                         <ul class="bi bi-chevron-right">The best software of the IPN 2019 Award |Project."3D-Engine" </ul>
                         <h3>Research interest</h3>
-                        <ul class="bi bi-chevron-right">Materials Characterization</ul>
-                        <ul class="bi bi-chevron-right">Modeling and simulation of thermal, rheological and chemical properties in materials.</ul>
+                        <ul class="bi bi-chevron-right">Biophotonics</ul>
+                        <ul class="bi bi-chevron-right">Artificial Intelligence</ul>
+                        <ul class="bi bi-chevron-right">Big data</ul>
+                        <ul class="bi bi-chevron-right">Competitive and technological intelligence</ul>
                        
     
                        
@@ -187,26 +262,14 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <h3 class="title"style="font-family: Verdana, Geneva, Tahoma, sans-serif; color:#5e2129">Content by Luis Felipe de Jesus Quintanar</h3>
                         <div class="list-group">
-                            <a href="VR-club.html" class="list-group-item ">
-                              <h4 class="list-group-item-heading">Virtual Reality Club</h4>
-                              <p class="list-group-item-text"><img src="img/laboratory logo.png" alt="" width="164px" height="80px"> </p>
-
-                            </a>
-                            <a href="#" class="list-group-item">
-                              <h4 class="list-group-item-heading">Collaboration</h4>
-                              <p class="list-group-item-text">List Group Item Text</p>
-                            </a>
+                          
                             <a href="#" class="list-group-item">
                               <h4 class="list-group-item-heading">Projects</h4>
-                              <p class="list-group-item-text">Cancer Detection through fluorescence induction</p>
-                              <p class="list-group-item-text">Delimitation of cancer areas through fluorescence spectroscopy</p>
-                              <p class="list-group-item-text">Development of photoirradaition and photodection prototypes for research and application in the treatmnet and diagnosis of research</p>
-                              <p class="list-group-item-text">Research on fluorescence and reflectance of sick biological tissuees</p>
-                              <p class="list-group-item-text">Research on skin abnormalities through spectroscopy and digital imaging</p>
-                              <p class="list-group-item-text">study of abnormal biological tissue through spectroscopy and colorimetry</p>
-                              <p class="list-group-item-text">System for the detection of adulterated alcoholic beverages through fluorescence spectroscopy Investigation</p>
-                              <p class="list-group-item-text">System for the spectral characterization of semiconductor- based lighting sources investigations</p>
-                              <p class="list-group-item-text">Apple classification system using artificial vision investigation.</p>
+                              <p class="list-group-item-text"> SIP2020-0199: Experimental system with LED lighting control in hydroponic cultivation with parameter measurement</p>
+                              <p class="list-group-item-text">SIP2021-0489: System for the spectral characterization of semiconductor-based lighting sources</p>
+                              <p class="list-group-item-text">SIP2022-0278: Apple classification system using artificial vision</p>
+                              <p class="list-group-item-text">SIP2023-0161: Prototype for the detection of pests in cornfields using a semi-automated ground vehicle and artificial vision</p>
+                             
          
                             </a>
                           </div>
@@ -214,15 +277,6 @@
                 </div>
                 
 
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                      <li class="page-item"><a class="page-link" href="team.html">Previous</a></li>
-                      <li class="page-item"><a class="page-link" href="people2.html">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
-                  </nav>
             </div>
         </div>
         
