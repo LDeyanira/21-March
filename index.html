@@ -121,16 +121,20 @@
 
                 document.getElementById("searchButton").addEventListener("click",function(){
                     var searchTerm=document.getElementById("searchInput").value.toLowerCase();
+                  
                     //creando variable para localizacion de noticias
                     if (searchTerm =="news"||searchTerm=="NEWS"||searchTerm=="new"||searchTerm=="NEW"||
                         searchTerm=="noticias"||searchTerm=="NOTICIAS"||searchTerm=="noticia"||searchTerm=="Noticia"){
                         window.location.href="news3.html";
                     }
+
+
                     if (searchTerm=="publications"||searchTerm=="Publications"||searchTerm=="PUBLICATIONS"||searchTerm=="article"||searchTerm=="thesis"||searchTerm=="Article"||searchTerm=="Thesis"||searchTerm=="Patents"||searchTerm=="patents"||
                         searchTerm=="publicacion"||searchTerm=="Publicaciones"||searchTerm=="publicación"||searchTerm=="Publicación"||searchTerm=="tesis"||searchTerm=="Artículo"||searchTerm=="artículo"||searchTerm=="TESIS"||searchTerm=="ARTICULO"||searchTerm=="PATENTES"||searchTerm=="Patente"||searchTerm=="patente")
                     {
                         window.location.href="publications.html";
                     }
+                    
                     if(searchTerm =="events"||searchTerm=="EVENTS"||searchTerm=="Event"||searchTerm=="EVENT"||searchTerm=="event"){
                         window.location.href="events.html";
                     }
@@ -194,6 +198,7 @@
                 {
                         window.location.href="Alumni.html";
                     }
+                  
                     
 
                 })
